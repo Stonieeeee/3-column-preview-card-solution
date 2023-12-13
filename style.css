@@ -1,0 +1,129 @@
+:root {
+    --bg-color-orange: rgb(227, 136, 38);
+    --bg-color-cyan: rgb(0, 105, 112);
+    --bg-color-dark-cyan: rgb(0, 66, 65);
+
+    --nt-color-trans-white: hsla(0, 0%, 100%, 0.75);
+    --nt-color-white: hsl(0, 0%, 95%);
+
+    --ff-1: 'Lexend Deca', sans-serif;
+    --ff-2: 'Big Shoulders Display', sans-serif;
+
+    --fw-regular: 400;
+    --fw-bold: 700;
+}
+
+/* css reset */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  * {
+    margin: 0;
+  }
+
+  body {
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  input, button, textarea, select {
+    font: inherit;
+  }
+
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+
+  #root, #__next {
+    isolation: isolate;
+  }
+
+/* styling */
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  font-size: 0.9375rem;
+  color: var(--nt-color-trans-white);
+  font-family: var(--ff-1);
+  font-weight: var(--fw-regular);
+}
+
+.card-container {
+  max-width: 65rem;
+  margin: 0 auto;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 3rem;
+  border-radius: 0.8125rem;
+  overflow: hidden;
+}
+
+.card {
+  padding: 3rem;
+}
+
+.card h1{
+  font-family: var(--ff-2);
+  color: var(--nt-color-white);
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+.content-1 {
+  background: var(--bg-color-orange);
+}
+
+.content-2 {
+  background: var(--bg-color-cyan);
+}
+
+.content-3 {
+  background: var(--bg-color-dark-cyan);
+}
+
+.card a {
+  text-decoration: none;
+  background-color: hsl(0, 0%, 95%);
+  padding: .5rem 2rem;
+  border-radius: 1.625rem;
+  margin-top: 4rem;
+  display: inline-block;
+  border: 2px solid hsl(0, 0%, 95%);
+  transition: all .2s;
+}
+
+.content-1 a {
+  color: var(--bg-color-orange);
+}
+
+.content-2 a {
+  color: var(--bg-color-cyan);
+}
+
+.content-3 a {
+  color: var(--bg-color-dark-cyan);
+}
+
+.card a:hover {
+  color: var(--nt-color-white);
+  background: transparent;
+}
+
+@media only screen and (max-width: 53rem) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
